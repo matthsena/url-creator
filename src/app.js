@@ -17,13 +17,26 @@ module.exports = {
         if (options && options != {}) {
             url = null
         } else {
-            url = phrase.toLowerCase()
-            url = url.normalize("NFD").replace(/[\u0300-\u036f-\u00E7-\u223C-\u2038]/g, "")
-            url = url.trim()
-            url = url.replace(/[" "]/g, "-")
+            url = this.cleanPhrase(phrase)
         }
 
-
         return url
+    },
+    /**
+     * 
+     * @param {String} phrase
+     *
+     * Method to default clean of phrase 
+     */
+    cleanPhrase(phrase) {
+        // transform to lower case
+        phrase = phrase.toLowerCase()
+        // remove characters like [` ´ ~ ç]
+        phrase = phrase.normalize("NFD").replace(/[\u0300-\u036f-\u00E7-\u223C-\u2038]/g, "")
+        phrase = phrase.trim()
+        // replace white spaces with -
+        phrase = phrase.replace(/[" "]/g, "-")
+
+        return phrase
     }
 }
