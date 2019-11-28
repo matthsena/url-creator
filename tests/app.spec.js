@@ -1,5 +1,9 @@
 const app = require('../src/app')
 
+test('Basic clean function', () => {
+    expect(app.cleanPhrase('Maçã com pudim')).toBe('maca-com-pudim')
+})
+
 test('Generating URL without options', () => {
     expect(app.generateURL('Maça com pudim')).toBe('maca-com-pudim')
 })
