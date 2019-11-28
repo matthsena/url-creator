@@ -1,3 +1,5 @@
-const URL = require('./url')
-
-URL.generateURL('Olá mundo')
+module.exports = {
+    generateURL(phrase) {
+        return phrase
+    }
+}
