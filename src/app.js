@@ -40,8 +40,9 @@ module.exports = {
         phrase = phrase.toLowerCase()
         // remove characters like [` ´ ~ ç]
         phrase = phrase.normalize("NFD").replace(/[\u0300-\u036f-\u00E7-\u223C-\u2038]/g, "")
+        // remove white spaces
         phrase = phrase.trim()
-        // replace white spaces with -
+        phrase = phrase.replace(/\s\s+/g, " ")
         phrase = phrase.replace(/[" "]/g, "-")
 
         return phrase
