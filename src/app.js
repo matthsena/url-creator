@@ -15,7 +15,14 @@ module.exports = {
         let url
         // If user define any option
         if (options && options != {}) {
-            url = null
+            url = this.cleanPhrase(phrase)
+            
+              Object.keys(options).forEach(option => {
+                if (option) {
+                    url += `_${option}-${options[option]}_`
+                }
+            })
+
         } else {
             url = this.cleanPhrase(phrase)
         }

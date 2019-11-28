@@ -9,5 +9,5 @@ test('Generating URL without options', () => {
 })
 
 test('Generating URL with options', () => {
-    expect(app.generateURL('Maça com pudim', {id: 1, category: 'Food'})).toBe(null)
+    expect(app.generateURL('Maça com pudim', {id: 1})).toBe('maca-com-pudim_id-1_')
 }) 
