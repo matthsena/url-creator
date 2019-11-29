@@ -21,5 +21,6 @@
   "homepage": "https://github.com/matthsena/url-creator#readme",
   "devDependencies": {
     "jest": "^24.9.0"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
