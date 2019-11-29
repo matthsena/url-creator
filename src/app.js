@@ -11,7 +11,7 @@ module.exports = {
         // If user define any option
         if (id) {
             url = this.cleanPhrase(phrase)
-            url += `_${id}_`
+            url += `_id-${id}_`
 
         } else {
             url = this.cleanPhrase(phrase)
@@ -36,17 +36,5 @@ module.exports = {
         phrase = phrase.replace(/[" "]/g, "-")
 
         return phrase
-    },
-    /**
-     * 
-     * @param {String} url 
-     * 
-     * Method to extract Id from URL
-     */
-    extractId(url) {
-
-        id = url.match(/\_(.*?)\_/g)
-        id = id[0].replace(/[_]/g, "")
-        return id
     }
 }
