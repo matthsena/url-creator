@@ -9,7 +9,7 @@ test('Generating URL without options', () => {
 })
 
 test('Generating URL with options', () => {
-    expect(app.generateURL('Maça com pudim', {id: 1})).toBe('maca-com-pudim_id-1_')
+    expect(app.generateURL('Maça com pudim', 1)).toBe('maca-com-pudim_id-1_')
 }) 
 
 test('Generating URL with multiple spaces', () => {

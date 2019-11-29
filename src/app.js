@@ -2,26 +2,16 @@ module.exports = {
     /**
      * 
      * @param {String} phrase = the phrase u want transform in a URL  
-     * @param {Object} options = options to this transform
+     * @param {Any} id = item id
      * 
-     * options: {
-     *      id: <Any>
-     *      category: <String>
-     *      maxLength: <Int>
-     * }
      */
-    generateURL(phrase, options) {
-        
+    generateURL(phrase, id) {
+
         let url
         // If user define any option
-        if (options && options != {}) {
+        if (id) {
             url = this.cleanPhrase(phrase)
-            
-              Object.keys(options).forEach(option => {
-                if (option) {
-                    url += `_${option}-${options[option]}_`
-                }
-            })
+            url += `_id-${id}_`
 
         } else {
             url = this.cleanPhrase(phrase)
