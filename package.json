@@ -1,6 +1,6 @@
 {
   "name": "@matthsena/url-creator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A script to create a great and SEO friendly URLs",
   "main": "src/app.js",
   "directories": {
